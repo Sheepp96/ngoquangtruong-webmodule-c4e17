@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>USER NAME</title>
+  </head>
+  <body>
+    <h3>USER INFOMATIONS</h3>
+
+    <h4>Name: {{ user.name }}</h4>
+
+    <h4>Age: {{ user.age }}</h4>
+
+    {% if user.gender == 0 %}
+    <h4>Gender: Miss {{ user.name }}</h4>
+
+    {% elif user.gender == 1 %}
+    <h4>Gender: Mr {{ user.name }}</h4>
+
+    {% endif %}
+
+    <h4>Work: {{ user.work }}
+
+  </body>
+</html>
