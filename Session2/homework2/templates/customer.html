@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>WARM WINTER PROJECT - CUSTOMER</title>
+  </head>
+  <body>
+    <h1>TEN FIRST MALE THAT NOT YET CONTACTED CUSTOMER</h1>
+
+    <div>
+
+    {% for c in all_customer %}
+    
+
+      <p>Name         : {{ c.name     }}</p>
+      <p>Gender       : {{ c.gender   }}</p>
+      <p>Email        : {{ c.email    }}</p>
+      <p>Phone number : {{ c.phone    }}</p>
+      <p>Company      : {{ c.company  }}</p>
+      <p>Job          : {{ c.job      }}</p>
+      <p>Contacted    : {{ c.contacted}}</p>
+      <hr>
+
+    {% endfor %}
+
+    </div>
+  </body>
+</html>
