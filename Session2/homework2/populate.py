@@ -11,7 +11,7 @@ for i in range(50):
     print("Saving", i + 1, ".....")
     customer = Customer(name = fake.name(),
                         gender = randint(0,1),
-                        email = fake.ascii_email(),
+                        email = fake.email(),
                         phone = fake.phone_number(),
                         job = fake.job(),
                         company = fake.company(),
