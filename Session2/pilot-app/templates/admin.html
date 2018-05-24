@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ADMIN PAGE</title>
+  </head>
+  <body>
+    <h1>Admin page</h1>
+    <table border = "1px">
+
+      <thead>
+        <th>STT</th>
+        <th>Name</th>
+        <th>YOB</th>
+        <th>GENDER</th>
+        <th>HEIGHT</th>
+        <th>PHONE</th>
+        <th>ADDRESS</th>
+        <th>STATUS</th>
+      </thead>
+
+
+      <tbody>
+
+        {% for s in all_service %}
+
+
+        <!-- Trong vòng for của jinja2 mặc định có index dùng để đếm, chỉ cần gọi nó loop.index -->
+        <tr>
+          <td> {{ loop.index }} </td>
+          <td> {{ s.name     }} </td>
+          <td> {{ s.yob      }} </td>
+
+          <td>
+            <!-- {% if s.gender == 0 %}
+              Nữ
+            {% elif s.gender == 1%}
+              Nam
+            {% endif %} -->
+            {{ "Nam" if s.gender == 1 else "Nữ" }}
+          </td>
+
+          <td> {{ s.height   }} </td>
+          <td> {{ s.phone    }} </td>
+          <td> {{ s.address  }} </td>
+
+          <td>
+            <!-- {% if s.status == True %}
+              Bận
+            {% elif s.status == False %}
+              Rảnh
+            {% endif %} -->
+            {{ "Rảnh" if s.status == True else "Bận" }}
+          </td>
+
+          <td>
+            <a href = "{{ url_for('update', service_id=s.id) }}">Sửa</a>
+            <a href = "{{ url_for('delete', service_id = s.id ) }}">Xóa</a>
+          </td>
+
+        </tr>
+        {% endfor %}
+      </tbody>
+
+
+    </table>
+  </body>
+</html>

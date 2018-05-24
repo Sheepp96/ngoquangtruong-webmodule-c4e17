@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ADMIN PAGE</title>
+  </head>
+  <body>
+
+    <h1>Admin page</h1>
+
+
+    <form method = "post">
+      <label>Link</label>
+      <input type = "text" name = "link" value = "">
+      <input type = "submit" name = "" value = "Submit">
+
+      <a href="{{ url_for('logout') }}">Đăng xuất</a>
+    </form>
+    <br>
+    <table border="1px">
+      <thead>
+          <th>STT</th>
+          <th>Tên</th>
+          <th>Views</th>
+          <th>Link</th>
+          <th>Ảnh</th>
+      </thead>
+
+      <tbody>
+        {% for v in videos %}
+        <tr>
+
+          <td>  {{ loop.index }}  </td>
+          <td>  {{ v.title    }}  </td>
+          <td>  {{ v.views    }}  </td>
+          <td>  {{ v.link     }}  </td>
+          <td>
+            <img src="{{ v.thumbnail }}" width="200px" height="130px">
+          </td>
+
+          <td>
+            <a href="{{url_for('delete', youtube_id = v.id)  }}">Xoá video</a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+
+    </table>
+
+  </body>
+</html>

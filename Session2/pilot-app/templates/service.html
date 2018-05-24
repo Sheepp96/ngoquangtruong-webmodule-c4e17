@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>SERVICE PAGE</title>
+  </head>
+  <body>
+<h1>Service page</h1>
+
+{% for s in all_service %}
+  <div>
+
+    <img src="https://via.placeholder.com/300x200" alt="image">
+    <p>Name  : {{ s.name   }}</p>
+    <p>YOB   : {{ s.yob    }}</p>
+    <p>Height: {{ s.height }}</p>
+    <p>
+      <a href="{{ url_for('detail', service_id=s.id) }}">Chi tiết</a>
+    </p>
+    <hr>
+
+  </div>
+{% endfor %}
+
+  </body>
+</html>

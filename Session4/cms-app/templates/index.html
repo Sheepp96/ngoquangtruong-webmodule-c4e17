@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CMS-APP</title>
+  </head>
+  <body>
+    <h1>C4E 17 CMS APP</h1>
+    <div>
+      <a href=" {{ url_for('login') }} ">Đăng nhập</a>
+
+    </div>
+    <hr>
+    {% for v in videos %}
+
+      <div>
+        <img src = "{{ v.thumbnail }}" width="200px" height="130px">
+        <br>
+
+        <b>{{ v.title }}</b>
+        <br>
+
+        <span>Lượt xem: {{ v.views }}</span>
+        <br>
+        <a href=" {{url_for('detail', youtube_id = v.youtube_id) }}">Xem video</a>
+
+        <hr>
+
+      </div>
+
+    {% endfor %}
+  </body>
+</html>

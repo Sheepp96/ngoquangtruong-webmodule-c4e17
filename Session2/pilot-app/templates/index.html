@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Mùa đông không lạnh</title>
+  </head>
+
+  <body>
+    <h1>Mùa đông không lạnh</h1>
+
+    <a href = "{{ url_for('search', g = 0) }}">Bạn là nam?</a>
+    <a href = "{{ url_for('search', g = 1) }}">Bạn là nữ? </a>
+
+    <hr>
+    <a href = "{{ url_for('admin'        ) }}">Tới trang của admin</a>
+
+    <hr>
+    <a href = "{{ url_for('create'       ) }}">Tạo thêm service</a>
+
+    <hr>
+    <a href = "{{ url_for('service'      ) }}">Service</a>
+    
+  </body>
+</html>

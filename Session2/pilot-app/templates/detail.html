@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Chi tiết</title>
+  </head>
+  <body>
+    <div>
+
+      <img src=" {{ service_detail.image}}" alt="image">
+
+      <h3>  {{ service_detail.name         }}</h3>
+      <p> YOB         :  {{ service_detail.yob          }}</p>
+      <p> HEIGHT      :  {{ service_detail.height       }}</p>
+      <p> PHONE       :  {{ service_detail.phone        }}</p>
+      <p> ADDRESS     :  {{ service_detail.address      }}</p>
+      <p> DESCRIPTION :  {{ service_detail.description  }}</p>
+      <p> MEASUREMENT :  {{ service_detail.measurements }}</p>
+
+      {% if service_detail.status == True %}
+        <p>STATUS: Bận</p>
+
+      {% elif service_detail.status == False %}
+        <p>STATUS: Rảnh</p>
+
+      {% endif %}
+
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>UPDATE PAGE</title>
+  </head>
+  <body>
+
+    <h1>Update service page</h1>
+
+    <form method="post">
+
+      <label>Name:</label>
+      <br>
+      <input type="text" name="name" value="{{ service_to_update.name }}">
+      <br>
+
+      <label>Yob:</label>
+      <br>
+      <input type="text" name="yob" value="{{ service_to_update.yob }}">
+      <br>
+
+      <label>Gender:</label>
+      <br>
+      <input type="radio" name="gender" value=1 checked> Male
+      <input type="radio" name="gender" value=0> Female
+      <br>
+
+      <label>Height:</label>
+      <br>
+      <input type="text" name="height" value="{{ service_to_update.height }}">
+      <br>
+
+      <label>Phone:</label>
+      <br>
+      <input type="text" name="phone" value="{{ service_to_update.phone }}">
+      <br>
+
+      <label>Address:</label>
+      <br>
+      <input type="text" name="address" value="{{ service_to_update.address }}">
+      <br>
+
+      <label>Description:</label>
+      <br>
+      <input type="text" name="description" value="{{ service_to_update.description }}">
+      <br>
+
+      <label>Measurements:</label>
+      <br>
+      <input type="text" name="measurements" value="{{ service_to_update.measurements }}">
+      <br>
+
+      <label>Image:</label>
+      <br>
+      <input type="text" name="image" value="{{ service_to_update.image }}">
+      <br>
+
+      <input type="submit" name="" value="Cập nhật">
+
+    </form>
+
+  </body>
+</html>
