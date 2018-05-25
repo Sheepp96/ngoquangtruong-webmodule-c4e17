@@ -3,7 +3,7 @@ from flask import *
 # from mongoengine import StringField, IntField, BooleanField, Document
 from mongoengine import * # dài quá nên import * cho nhanh
 from models.service import Service
-
+from models.user import User
 
 import mlab
 
@@ -80,8 +80,12 @@ def service():
 
 @app.route('/detail/<service_id>')
 def detail(service_id):
-    service_detail = Service.objects.with_id(service_id)
-    return render_template('detail.html', service_detail=service_detail)
+    if "loggedin" in session:
+        service_detail = Service.objects.with_id(service_id)
+        return render_template('detail.html', service_detail=service_detail)
+    else:
+        return redirect(url_for('login'))
+
 
 @app.route('/update/<service_id>', methods=['GET', 'POST'])
 def update(service_id):
@@ -117,6 +121,58 @@ def update(service_id):
         service_to_update.reload()
         return redirect(url_for('admin'))
 
+
+@app.route('/signin', methods = ["GET", "POST"])
+def signin():
+
+    if request.method == "GET":
+        return render_template('signin.html')
+    elif request.method == "POST":
+        form = request.form
+        name = form['name']
+        email = form['email']
+        username = form['username']
+        password = form['password']
+
+    user = User(name = name,
+                email = email,
+                username = username,
+                password = password)
+    user.save()
+
+    return redirect(url_for('service'))
+
+
+@app.route('/user')
+def user():
+    all_user = User.objects()
+    return render_template("user.html", all_user = all_user)
+
+
+@app.route('/login', methods = ['GET', 'POST'])
+def login():
+    if request.method == "GET":
+        return render_template('login.html')
+    elif request.method == "POST":
+        form = request.form
+        username = form['username']
+        password = form['password']
+
+        users = User.objects(username = username, password = password)
+        if len(users) == 0:
+            return redirect(url_for('signin'))
+        else:
+            session['loggedin'] = True
+            return redirect(url_for('service'))
+
+@app.route('/service-request')
+def servicerequest():
+    all_service = Service.objects()
+    users = User.objects()
+    request = Request(time = str(datetime.now()),
+                      is_accepted = False)
+    request.save()
+    return "Đã gửi yêu cầu"
 
 if __name__ == '__main__':
   app.run(debug=True)

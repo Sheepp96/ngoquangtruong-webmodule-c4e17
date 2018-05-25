@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>USER INFOMATIONS</title>
+  </head>
+  <body>
+    <h1>User infomations</h1>
+
+    <table border = "1px">
+      <thead>
+        <th>STT</th>
+        <th>Tên</th>
+        <th>Email</th>
+        <th>Username</th>
+        <th>Password</th>
+      </thead>
+
+      <tbody>
+        {% for user in all_user %}
+          <tr>
+
+            <td> {{ loop.index    }}</td>
+            <td> {{ user.name     }}</td>
+            <td> {{ user.email    }}</td>
+            <td> {{ user.username }}</td>
+            <td> {{ user.password }}</td>
+          </tr>
+        {% endfor %}
+
+      </tbody>
+    </table>
+
+  </body>
+</html>
