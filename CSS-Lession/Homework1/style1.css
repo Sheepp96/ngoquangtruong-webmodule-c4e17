@@ -1,54 +1,92 @@
-.bg-color {
-  background-color: lightblue;
+#box-model {
+  border: 1px solid #ff4fa4;
+  margin: 0px;
+  padding: 50px 0px 0px 0px;
+  text-align: center;
 }
 
-.h-20px {
-  height: 20px;
+.bg-image {
+  background-image: url("http://imperiya.by/image/OB1qovROwZu.jpg");
 }
 
-.h-50px {
-  height: 50px;
+.text-r {
+  text-transform: uppercase;
+  color: red;
 }
 
-.h-400px {
+.fonts-40 {
+  font-size: 40px;
+}
+
+#box-model-2 {
   height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.h-500px {
+  height: 500px;
 }
 
 .d-inline-block {
   display: inline-block;
 }
 
-.bg-colors {
-  background-color: lightgreen;
+#box-model-2 {
+  border: 1px;
+  margin: 0px;
+  padding: 50px;
 }
 
-.w-24 {
+#box-model-3 {
+  padding: 10px;
+  width: 18%;
+}
+
+.h-400px {
+  height: 400px;
+}
+
+#name {
+  text-transform: uppercase;
+  border-top: 1px solid white;
+  height: 80px;
+  font-size: 30px;
+  text-align: center;
+  padding: 15px;
+}
+
+.w-20 {
   width: 20%;
 }
 
-#box-model {
-  margin: 0px 30px;
-
-}
-
-.bg-colorss {
-  background-color: blue;
-}
-
-.h-280px {
-  height: 280px;
-}
-
 .circle {
-  width: 200px;
-  height: 200px;
-  background: red;
-  -moz-border-radius: 175px;
-  -webkit-border-radius: 175px;
-  --border-radius: 175px;
-  border-radius: 175px;
+  height: 220px;
+  border-radius: 80%;
 }
 
-.pad {
-  padding: 35px;
+
+.bg-image-1 {
+  background-image: url("http://st.phunuonline.com.vn/staticFile/Subject/2017/10/28/cam_281538256.jpg");
+  background-position: center;
+  background-size: 243px 340px;
+}
+
+.bg-image-2 {
+  background-image: url("https://scontent.fhan5-7.fna.fbcdn.net/v/t1.0-9/31870535_1649273475169110_6106741190449692672_n.jpg?_nc_cat=0&oh=d1fe677c6d02f5e7dad18a6a3d7f5b37&oe=5B7E1009");
+  background-position: center;
+  background-size: 243px 340px;
+}
+
+.bg-image-3 {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVCLwWiRZZQ2WQVMCxRADg-wjtThWz6Bs4E6aXB2n_mIiNbvrQ");
+  background-position: center;
+  background-size: 243px 340px;
+}
+
+.bg-image-4 {
+  background-image: url("https://i.ytimg.com/vi/N-p96ZHy25I/maxresdefault.jpg");
+  background-position: center;
+  background-size: 243px 340px;
 }
