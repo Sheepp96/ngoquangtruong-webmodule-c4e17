@@ -1,0 +1,54 @@
+.bg-color {
+  background-color: lightblue;
+}
+
+.h-20px {
+  height: 20px;
+}
+
+.h-50px {
+  height: 50px;
+}
+
+.h-400px {
+  height: 400px;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+.bg-colors {
+  background-color: lightgreen;
+}
+
+.w-24 {
+  width: 20%;
+}
+
+#box-model {
+  margin: 0px 30px;
+
+}
+
+.bg-colorss {
+  background-color: blue;
+}
+
+.h-280px {
+  height: 280px;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  background: red;
+  -moz-border-radius: 175px;
+  -webkit-border-radius: 175px;
+  --border-radius: 175px;
+  border-radius: 175px;
+}
+
+.pad {
+  padding: 35px;
+}

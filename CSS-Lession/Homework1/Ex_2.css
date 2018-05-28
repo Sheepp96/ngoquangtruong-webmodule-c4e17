@@ -1,0 +1,158 @@
+.content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-block {
+    width: 10%;
+}
+.m-lt-10px {
+    margin-left: 10px;
+}
+
+.mt-20px {
+    margin-top: 20px;
+}
+
+.w-150px {
+    width: 150px;
+}
+
+.block-1 {
+    height: 150px;
+    background-color: #F48FB1;
+}
+
+.block-2 {
+    height: 300px;
+    background-color: #80CBC4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mg-top-10px{
+    margin-top: 10px;
+}
+
+.small-block {
+    height: 50px;
+    width: 100%;
+    background-color: #00796B;
+}
+
+.block-3 {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+.small-block-3 {
+    height: 45%;
+    width: 100%;
+    background-color: #BDBDBD;
+}
+
+.right-block-top {
+    width: 85%;
+}
+
+.right-block-top-1 {
+    height: 500px;
+    background-color: #81C784;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.right-block-1-small-box {
+    margin-top: 200px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.right-block-white {
+    height: 30px;
+    background-color: white;
+    width: 250px;
+}
+
+.right-block-black {
+    height: 30px;
+    background-color: black;
+    width: 400px;
+}
+
+.right-block-top-2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.right-block-2-small-box {
+    background-color: darkgreen;
+    width:25%;
+    height: 80px;
+}
+
+.border-white{
+    border-right: 1px solid;
+    border-right-color: white;
+}
+
+.right-block-middle {
+    height: 50px;
+}
+
+.right-block-middle-lightblue {
+    background-color: lightblue;
+    height: 50px;
+    width: 60%;
+}
+
+.right-block-middle-pinky {
+    background-color: #F48FB1;
+    height: 50px;
+    width: 40%;
+}
+
+.mt-b-20px {
+    margin: 20px 0px;
+}
+
+.right-block-bot {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.right-block-bot-small {
+    height: 350px;
+    width: 24%;
+}
+
+.right-block-bot-small-1 {
+    height: 100px;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: #C5E1A5;
+}
+
+.right-block-bot-small-2 {
+    height: 240px;
+    width: 100%;
+    background-color: #F8BBD0;
+}
+
+.footer {
+    background-color:  lightgrey;
+    width: 97%;
+    height: 50px;
+}
+
+.mt-lt {
+  margin: 20px 0px 0px 10px;
+}
